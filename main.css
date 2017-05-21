@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(http://www.woodworkingnetwork.com/sites/woodworking/files/Handmade-Bench.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 70px; 
+}
+
+nav {
+  height: 50px;
+}
+
+.navbar-brand {
+  padding: 5px 15px;
+}
+
+#brandImg {
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+h1 {
+  position: absolute;
+  top: 110px;
+  left: 80px;
+  color: #ffd800;
+}
+
+.main-search {
+  margin-bottom: 100px;
+}
+
+img {
+  height: 60px;
+  width: 60px;
+}
+
+.jumbotron {
+}
