@@ -38,5 +38,6 @@ img {
   width: 60px;
 }
 
-.jumbotron {
+.hidden {
+  display: none;
 }

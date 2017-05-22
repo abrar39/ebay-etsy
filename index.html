@@ -30,36 +30,23 @@
       <div class="main-search container-fluid col-xs-12">
         <div class="input-group input-group-lg">
           <span class="input-group-addon" id="basic-addon1">S</span>
-          <input type="text" class="form-control" placeholder="Search eBay and Etsy" aria-describedby="basic-addon1">
+          <input type="text" class="form-control js-query-main" placeholder="Search eBay and Etsy" aria-describedby="basic-addon1">
         </div>
       </div>
 
       <!-- eBay -->
-      <div class="container-fluid col-sm-12 col-lg-6">
+      <div class="container-fluid col-xs-12 col-lg-6">
         
-        <div class="jumbotron js-results-ebay">
-          <div class="container-fluid col-sm-12">
-            <div class="container-fluid col-sm-2">
-              <p>Image</p>
-            </div>
-            <div class="container-fluid col-sm-8">
-              <p>Title</p>
-            </div>
-            <div class="container-fluid col-sm-2">
-              <p>Price</p>
-            </div>
-          </div>
-        </div>
+        <div class="js-results-ebay"></div>
 
         <form action="#" class="js-search-form">
-          <div class="container-fluid col-sm-10">
+          <div class="container-fluid col-xs-10">
             <div class="input-group input-group-sm">
-              <span class="input-group-addon" id="sizing-addon3">E</span>
-              <input type="text" class="form-control js-query" placeholder="Search Only eBay" aria-describedby="sizing-addon3">
+              <span class="input-group-addon" id="sizing-addon3">eBay</span>
+              <input type="text" class="form-control js-query-ebay" placeholder="Search Only eBay" aria-describedby="sizing-addon3">
             </div>
           </div>
-
-          <div class="container-fluid col-sm-2">
+          <div class="container-fluid col-xs-2">
             <button type="button" class="btn btn-success js-success-ebay">Search eBay</button>
           </div>
         </form>
@@ -67,31 +54,18 @@
       </div>
 
       <!-- ETSY -->
-      <div class="container-fluid col-sm-12 col-lg-6">
+      <div class="container-fluid col-xs-12 col-lg-6">
         
-        <div class="jumbotron js-results-etsy">
-          <div class="container-fluid col-sm-12">
-            <div class="container-fluid col-sm-2">
-              <p>Image</p>
-            </div>
-            <div class="container-fluid col-sm-8">
-              <p>Title</p>
-            </div>
-            <div class="container-fluid col-sm-2">
-              <p>Price</p>
-            </div>
-          </div>
-        </div>
+        <div class="js-results-etsy"></div>
 
         <form action="#" class="js-search-form">
-          <div class="container-fluid col-sm-10">
+          <div class="container-fluid col-xs-10">
             <div class="input-group input-group-sm">
-              <span class="input-group-addon" id="sizing-addon3">E</span>
-              <input type="text" class="form-control js-query" placeholder="Search Only ETSY" aria-describedby="sizing-addon3">
+              <span class="input-group-addon" id="sizing-addon3">Etsy</span>
+              <input type="text" class="form-control js-query-etsy" placeholder="Search Only ETSY" aria-describedby="sizing-addon3">
             </div>
           </div>
-
-          <div class="container-fluid col-sm-2">
+          <div class="container-fluid col-xs-2">
             <button type="button" class="btn btn-success js-success-etsy">Search ETSY</button>
           </div>
         </form>

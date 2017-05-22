@@ -1,4 +1,5 @@
-//var etsyURL = "https://openapi.etsy.com/v2/listings/active.js?keywords=teapot&limit=12&includes=Images:1&api_key=jzmfv2cmv22o122d0jiv7z9m";
+var SPACE_KEY = 13;
+var SEARCH_RESULTS_NUM = 20;
 
 /***********/
 /*  ETSY   */
@@ -13,6 +14,7 @@ function getDataFromEtsyApi(searchTerm, callback) {
     data: {
       keywords: searchTerm,
       api_key: ETSY_KEY,
+      includes: 'Images',
     },
     success: callback,
   };
@@ -20,15 +22,16 @@ function getDataFromEtsyApi(searchTerm, callback) {
 }
  
 function displayEtsySearchData(data) {
+  var results = '<div class="jumbotron pre-scrollable"><div class="container-fluid col-xs-12"><div class="container-fluid col-xs-2"><p>Image</p></div><div class="container-fluid col-xs-8"><p>Title</p></div><div class="container-fluid col-xs-2"><p>Price</p></div></div>';
   if (data.ok) {
-    for(var i = 0; i < 5; i++) {
+    for(var i = 0; i < SEARCH_RESULTS_NUM; i++) {
       item = data.results[i];
-      $('.js-results-etsy').append('<div class="container-fluid col-sm-12"><div class="container-fluid col-sm-2"><img src="' + item.galleryURL + '"></div><div class="container-fluid col-sm-8"><p>' + item.title + '</p></div><div class="container-fluid col-sm-2"><p>$' + item.price + '</p></div></div>');
-      //$('.js-results-etsy').append("<p>" + item.title + "</p>");
+      results += '<div class="container-fluid col-xs-12"><div class="container-fluid col-xs-2"><img src="' + item.Images[0].url_75x75 + '"></div><div class="container-fluid col-xs-8"><p>' + item.title + '</p></div><div class="container-fluid col-xs-2"><p>$' + item.price + '</p></div></div>';
     }
+    results += '</div>';
+    $('.js-results-etsy').html(results);
   }
 }
-
 
 /***********/
 /*  eBay   */
@@ -62,30 +65,53 @@ function getDataFromEbayApi(searchTerm, callback) {
 }
 
 function displayEbaySearchData(data) {
+  var results = '<div class="jumbotron pre-scrollable"><div class="container-fluid col-xs-12"><div class="container-fluid col-xs-2"><p>Image</p></div><div class="container-fluid col-xs-8"><p>Title</p></div><div class="container-fluid col-xs-2"><p>Price</p></div></div>';
   if(data) {
-    for(var i = 0; i < 5; i++) {
+    for(var i = 0; i < SEARCH_RESULTS_NUM; i++) {
       item = data.findItemsByKeywordsResponse[0].searchResult[0].item[i];
-      $('.js-results-ebay').append('<div class="container-fluid col-sm-12"><div class="container-fluid col-sm-2"><img src="' + item.galleryURL + '"></div><div class="container-fluid col-sm-8"><p>' + item.title + '</p></div><div class="container-fluid col-sm-2"><p>$' + item.sellingStatus[0].currentPrice[0].__value__ + '</p></div></div>');
-      //$('.js-results-ebay').append("<p>" + item.galleryURL + "</p>");
-      //$('.js-results-ebay').append("<p>" + item.title + "</p>");
-      //$('.js-results-ebay').append("<p>$" + item.sellingStatus[0].currentPrice[0].__value__ + "</p>");
+      results += '<div class="container-fluid col-xs-12"><div class="container-fluid col-xs-2"><img src="' + item.galleryURL + '"></div><div class="container-fluid col-xs-8"><p>' + item.title + '</p></div><div class="container-fluid col-xs-2"><p>$' + item.sellingStatus[0].currentPrice[0].__value__ + '</p></div></div>';
     }
+    results += '</div>';
+    $('.js-results-ebay').html(results);
   }
 }
  
 function watchSubmit() {
+  /* Main Search Bar */
+  $('.js-query-main').keypress(function(e) {
+    if(e.which === SPACE_KEY) {
+      var query = $(this).val();
+      getDataFromEbayApi(query, displayEbaySearchData);
+      getDataFromEtsyApi(query, displayEtsySearchData);
+    }
+  });
+
   /* eBay */
   $('.js-success-ebay').click(function(e) {
     e.preventDefault();
-    var query = $(this).parents('.js-search-form').find('.js-query').val();
+    var query = $(this).parents('.js-search-form').find('.js-query-ebay').val();
     getDataFromEbayApi(query, displayEbaySearchData);
+  });
+
+  $('.js-query-ebay').keypress(function(e) {
+    if(e.which === SPACE_KEY) {
+      var query = $(this).val();
+      getDataFromEbayApi(query, displayEbaySearchData);
+    }
   });
 
   /* ETSY */
   $('.js-success-etsy').click(function(e) {
     e.preventDefault();
-    var query = $(this).parents('.js-search-form').find('.js-query').val();
+    var query = $(this).parents('.js-search-form').find('.js-query-etsy').val();
     getDataFromEtsyApi(query, displayEtsySearchData);
+  });
+
+  $('.js-query-etsy').keypress(function(e) {
+    if(e.which === SPACE_KEY) {
+      var query = $(this).val();
+      getDataFromEtsyApi(query, displayEtsySearchData);
+    }
   });
 }
  
