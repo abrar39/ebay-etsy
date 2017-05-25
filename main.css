@@ -8,8 +8,16 @@ body {
   padding-top: 70px; 
 }
 
+.navbar-inverse {
+}
+
 nav {
   height: 50px;
+}
+
+.navbar {
+  background-color: #b1e5a0;
+
 }
 
 .navbar-brand {
@@ -22,6 +30,7 @@ nav {
 
 .fontVarela {
   font-family: 'Varela Round', sans-serif;
+  color: #c68e1d
 }
 
 #brandImg {
@@ -51,7 +60,7 @@ nav {
 }
 
 .jumbotron {
-  border: solid #c68e1d 1px;
+  border: solid #b1e5a0 1px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
