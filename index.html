@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>betsy</title>
+        <title role="Betsy Website Title">betsy</title>
         <link rel="shortcut icon" href="favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,7 +11,7 @@
     </head>
     <body>
       <!-- START OF NAV BAR -->
-      <div class="container-fluid">
+      <div role="navigation bar" class="container-fluid">
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -26,27 +26,28 @@
 
 
       <!-- BANNER -->
-      <div class="container-fluid col-xs-12">
+      <div role="banner" class="container-fluid col-xs-12">
         
-        <div class="container-fluid col-xs-12">
+        <div role="banner title heading" class="container-fluid col-xs-12">
           <h1 class="fontLobster" id="bannerHdg">betsy</h1>
         </div>
 
-        <div id="bannerSearch" class="main-search container-fluid col-xs-12">
+        <div role="banner main search bar" id="bannerSearch" class="main-search container-fluid col-xs-12">
           <div class="input-group input-group-lg">
             <span class="input-group-addon" id="basic-addon1">></span>
             <input type="text" class="form-control fontLobster js-query-main" placeholder="Search eBay and Etsy" aria-describedby="basic-addon1">
           </div>
+          <p class="fontVarela hidden js-search-notify">Searching...</p>
         </div>
 
       </div>
 
       <!-- eBay -->
-      <div class="container-fluid col-xs-12 col-lg-6">
+      <div role="ebay results and search" class="container-fluid col-xs-12 col-lg-6">
 
-        <div class="js-results-ebay results"></div>
+        <div role="ebay results" class="js-results-ebay results"></div>
 
-        <form action="#" class="js-search-form-ebay">
+        <form role="ebay search" action="#" class="js-search-form-ebay">
           <div class="container-fluid col-xs-12 search ebay-search">
             <div class="input-group input-group-sm">
               <span class="input-group-addon" id="sizing-addon2">eBay</span>
@@ -58,11 +59,11 @@
       </div>
 
       <!-- ETSY -->
-      <div class="container-fluid col-xs-12 col-lg-6">
+      <div role="etsy results and search" class="container-fluid col-xs-12 col-lg-6">
 
-        <div class="js-results-etsy results"></div>
+        <div role="etsy results" class="js-results-etsy results"></div>
 
-        <form action="#" class="js-search-form-etsy">
+        <form role="etsy search"action="#" class="js-search-form-etsy">
           <div class="container-fluid col-xs-12 search etsy-search">
             <div class="input-group input-group-sm">
               <span class="input-group-addon" id="sizing-addon3">Etsy</span>

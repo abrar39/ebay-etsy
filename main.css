@@ -105,4 +105,6 @@ div.container-fluid.col-xs-12.etsy-row:hover {
   display: none;
 }
 
-
+.hidden {
+  display: none;
+}

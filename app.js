@@ -37,6 +37,7 @@ function displayEtsySearchData(data) {
 
 function revealEtsySearch() {
   $('.etsy-search').fadeIn();
+  hideSearchingNotify();
 }
 
 /***********/
@@ -76,6 +77,14 @@ function revealEbaySearch() {
   $('.ebay-search').fadeIn();
 }
 
+function revealSearchingNotify() {
+  $('.js-search-notify').removeClass("hidden");
+}
+
+function hideSearchingNotify() {
+  $('.js-search-notify').addClass("hidden");
+}
+
 /**********************/
 /*  Control Station   */
 /**********************/
@@ -84,6 +93,7 @@ function watchSubmit() {
   $('.js-query-main').keypress(function(e) {
     if(e.which === SPACE_KEY) {
       var query = $(this).val();
+      revealSearchingNotify();
       getDataFromEbayApi(query, displayEbaySearchData);
       getDataFromEtsyApi(query, displayEtsySearchData);
     }
