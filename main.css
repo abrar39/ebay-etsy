@@ -16,6 +16,14 @@ nav {
   padding: 5px 15px;
 }
 
+.fontLobster {
+  font-family: 'Lobster', cursive;
+}
+
+.fontVarela {
+  font-family: 'Varela Round', sans-serif;
+}
+
 #brandImg {
   height: 40px;
   border-radius: 50%;
@@ -23,8 +31,14 @@ nav {
 }
 
 #bannerHdg {
+  display: none;
+  font-size: 80px;
   text-align: center;
   color: #c68e1d;
+}
+
+#bannerSearch {
+  display: none;
 }
 
 .main-search {
@@ -65,6 +79,7 @@ div.container-fluid.col-xs-12.etsy-row:hover {
 }
 
 .results {
+  display: none;
   padding-bottom: 0px;
 }
 
@@ -73,6 +88,12 @@ div.container-fluid.col-xs-12.etsy-row:hover {
   padding-bottom: 80px;
 }
 
-.hidden {
+.etsy-search {
   display: none;
 }
+
+.ebay-search {
+  display: none;
+}
+
+

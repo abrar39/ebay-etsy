@@ -1,5 +1,6 @@
 var SPACE_KEY = 13;
-var SEARCH_RESULTS_NUM = 20;
+var SEARCH_RESULTS_NUM = 10;
+var MSECONDS = 1000;
 
 /***********/
 /*  ETSY   */
@@ -22,7 +23,7 @@ function getDataFromEtsyApi(searchTerm, callback) {
 }
  
 function displayEtsySearchData(data) {
-  var results = '<div class="jumbotron pre-scrollable"><div class="container-fluid col-xs-12"><div class="container-fluid col-xs-2"><p class="header">Image</p></div><div class="container-fluid col-xs-8"><p class="header">Title</p></div><div class="container-fluid col-xs-2"><p class="header">Price</p></div></div>';
+  var results = '<div class="jumbotron pre-scrollable"><div class="container-fluid col-xs-12"><div class="container-fluid col-xs-2"><p class="header fontVarela">Image</p></div><div class="container-fluid col-xs-8"><p class="header fontVarela">Title</p></div><div class="container-fluid col-xs-2"><p class="header fontVarela">Price</p></div></div>';
   if (data.ok) {
     for(var i = 0; i < SEARCH_RESULTS_NUM; i++) {
       item = data.results[i];
@@ -30,8 +31,12 @@ function displayEtsySearchData(data) {
     }
     results += '</div>';
     $('.js-results-etsy').html(results);
-    $('.js-search-form-etsy').removeClass("hidden");
+    $('.results').fadeIn(MSECONDS, revealEtsySearch);
   }
+}
+
+function revealEtsySearch() {
+  $('.etsy-search').fadeIn();
 }
 
 /***********/
@@ -55,7 +60,7 @@ function getDataFromEbayApi(searchTerm, callback) {
 }
 
 function displayEbaySearchData(data) {
-  var results = '<div class="jumbotron pre-scrollable"><div class="container-fluid col-xs-12"><div class="container-fluid col-xs-2"><p class="header">Image</p></div><div class="container-fluid col-xs-8"><p class="header">Title</p></div><div class="container-fluid col-xs-2"><p class="header">Price</p></div></div>';
+  var results = '<div class="jumbotron pre-scrollable"><div class="container-fluid col-xs-12"><div class="container-fluid col-xs-2"><p class="header fontVarela">Image</p></div><div class="container-fluid col-xs-8"><p class="header fontVarela">Title</p></div><div class="container-fluid col-xs-2"><p class="header fontVarela">Price</p></div></div>';
   if(data) {
     for(var i = 0; i < SEARCH_RESULTS_NUM; i++) {
       item = data.findItemsByKeywordsResponse[0].searchResult[0].item[i];
@@ -63,12 +68,17 @@ function displayEbaySearchData(data) {
     }
     results += '</div>';
     $('.js-results-ebay').html(results);
-    $('.js-search-form-ebay').removeClass("hidden");
+    $('.results').fadeIn(MSECONDS, revealEbaySearch);
   }
 }
 
+function revealEbaySearch() {
+  $('.ebay-search').fadeIn();
+}
 
-/* Control Station */ 
+/**********************/
+/*  Control Station   */
+/**********************/
 function watchSubmit() {
   /* Main Search Bar */
   $('.js-query-main').keypress(function(e) {
@@ -80,12 +90,6 @@ function watchSubmit() {
   });
 
   /* eBay */
-  $('.js-success-ebay').click(function(e) {
-    e.preventDefault();
-    var query = $(this).parents('.js-search-form-ebay').find('.js-query-ebay').val();
-    getDataFromEbayApi(query, displayEbaySearchData);
-  });
-
   $('.js-query-ebay').keypress(function(e) {
     if(e.which === SPACE_KEY) {
       var query = $(this).val();
@@ -94,12 +98,6 @@ function watchSubmit() {
   });
 
   /* ETSY */
-  $('.js-success-etsy').click(function(e) {
-    e.preventDefault();
-    var query = $(this).parents('.js-search-form-etsy').find('.js-query-etsy').val();
-    getDataFromEtsyApi(query, displayEtsySearchData);
-  });
-
   $('.js-query-etsy').keypress(function(e) {
     if(e.which === SPACE_KEY) {
       var query = $(this).val();
@@ -107,7 +105,15 @@ function watchSubmit() {
     }
   });
 }
+
+function revealBannerHeader() {
+  $('#bannerHdg').fadeIn(MSECONDS, revealBannerSearch);
+}
+
+function revealBannerSearch() {
+  $('#bannerSearch').fadeIn((MSECONDS/2), watchSubmit);
+}
  
 $(function(){
-  watchSubmit();
+  revealBannerHeader();
 });
