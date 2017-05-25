@@ -3,7 +3,7 @@
 }
 
 body {
-  background: url(http://www.woodworkingnetwork.com/sites/woodworking/files/Handmade-Bench.jpg) no-repeat;
+  background: url(http://cdn.home-designing.com/wp-content/uploads/2012/03/modern-neutral-living-room.jpeg);
   background-size: cover;
   padding-top: 70px; 
 }
@@ -22,20 +22,55 @@ nav {
   vertical-align: middle;
 }
 
-h1 {
-  position: absolute;
-  top: 110px;
-  left: 80px;
-  color: #ffd800;
+#bannerHdg {
+  text-align: center;
+  color: #c68e1d;
 }
 
 .main-search {
   margin-bottom: 100px;
 }
 
-img {
-  height: 60px;
-  width: 60px;
+.container-fluid .jumbotron {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.jumbotron {
+  border: solid #c68e1d 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.jumbotron p {
+  font-size: 13px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+p.header {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+div.container-fluid.col-xs-12.ebay-row:hover {
+  background-color: #f7c0c0;
+}
+
+div.container-fluid.col-xs-12.etsy-row:hover {
+  background-color: #e3cdf7;
+}
+
+.results {
+  padding-bottom: 0px;
+}
+
+.search {
+  padding-top: 0px;
+  padding-bottom: 80px;
 }
 
 .hidden {

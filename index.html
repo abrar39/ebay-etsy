@@ -17,37 +17,39 @@
                 <img alt="Brand" id="brandImg" src="https://68.media.tumblr.com/avatar_592477119afa_128.png">
               </a>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Search</a></li>
-            </ul>
           </div>
         </nav>  
       </div>
       <!-- CLOSE OF NAV BAR -->
 
-      <!-- Banner -->
-      <h1>eBay ~ ETSY</h1>
-      <div class="main-search container-fluid col-xs-12">
-        <div class="input-group input-group-lg">
-          <span class="input-group-addon" id="basic-addon1">S</span>
-          <input type="text" class="form-control js-query-main" placeholder="Search eBay and Etsy" aria-describedby="basic-addon1">
+
+      <!-- BANNER -->
+      <div class="container-fluid col-xs-12">
+        
+        <div class="container-fluid col-xs-12">
+          <h1 id="bannerHdg">BESTY</h1>
         </div>
+
+        <div class="main-search container-fluid col-xs-12">
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="basic-addon1">></span>
+            <input type="text" class="form-control js-query-main" placeholder="Search eBay and Etsy" aria-describedby="basic-addon1">
+          </div>
+        </div>
+
       </div>
 
       <!-- eBay -->
       <div class="container-fluid col-xs-12 col-lg-6">
-        
-        <div class="js-results-ebay"></div>
 
-        <form action="#" class="js-search-form">
-          <div class="container-fluid col-xs-10">
+        <div class="js-results-ebay results"></div>
+
+        <form action="#" class="hidden js-search-form-ebay">
+          <div class="container-fluid col-xs-12 search">
             <div class="input-group input-group-sm">
               <span class="input-group-addon" id="sizing-addon3">eBay</span>
               <input type="text" class="form-control js-query-ebay" placeholder="Search Only eBay" aria-describedby="sizing-addon3">
             </div>
-          </div>
-          <div class="container-fluid col-xs-2">
-            <button type="button" class="btn btn-success js-success-ebay">Search eBay</button>
           </div>
         </form>
 
@@ -55,18 +57,15 @@
 
       <!-- ETSY -->
       <div class="container-fluid col-xs-12 col-lg-6">
-        
-        <div class="js-results-etsy"></div>
 
-        <form action="#" class="js-search-form">
-          <div class="container-fluid col-xs-10">
+        <div class="js-results-etsy results"></div>
+
+        <form action="#" class="hidden js-search-form-etsy">
+          <div class="container-fluid col-xs-12 search">
             <div class="input-group input-group-sm">
               <span class="input-group-addon" id="sizing-addon3">Etsy</span>
-              <input type="text" class="form-control js-query-etsy" placeholder="Search Only ETSY" aria-describedby="sizing-addon3">
+              <input type="text" class="form-control js-query-etsy" placeholder="Search Only Etsy" aria-describedby="sizing-addon3">
             </div>
-          </div>
-          <div class="container-fluid col-xs-2">
-            <button type="button" class="btn btn-success js-success-etsy">Search ETSY</button>
           </div>
         </form>
 
