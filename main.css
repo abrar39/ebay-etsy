@@ -8,37 +8,40 @@ body {
   padding-top: 70px; 
 }
 
-.navbar-inverse {
-}
-
 nav {
   height: 50px;
 }
 
+/* Navbar */
 .navbar {
   background-color: #b1e5a0;
 
 }
 
+/* Navbar Brand */
 .navbar-brand {
   padding: 5px 15px;
 }
 
+/* Google API Font Lobster */
 .fontLobster {
   font-family: 'Lobster', cursive;
 }
 
+/* Google API Font Varela Round */
 .fontVarela {
   font-family: 'Varela Round', sans-serif;
   color: #c68e1d
 }
 
+/* Navbar Brand Image */
 #brandImg {
   height: 40px;
   border-radius: 50%;
   vertical-align: middle;
 }
 
+/* Banner Header */
 #bannerHdg {
   display: none;
   font-size: 80px;
@@ -46,65 +49,79 @@ nav {
   color: #c68e1d;
 }
 
+/* Banner Search Bar */
 #bannerSearch {
   display: none;
 }
 
+/* Space between the main search bar and the jumbotrons */
 .main-search {
   margin-bottom: 100px;
 }
 
+/* Jumbotron Search Results Padding with the Font */
 .container-fluid .jumbotron {
   padding-left: 1px;
   padding-right: 1px;
 }
 
+/* Jumbotron Search Results */
 .jumbotron {
   border: solid #b1e5a0 1px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
+/* Jumbotron Search Results Font */
 .jumbotron p {
   font-size: 13px;
 }
 
+/* Jumbotron Search Results Images */
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
 
+/* Jumbotron Search Resutls Headers */
 p.header {
   font-size: 15px;
   font-weight: bold;
 }
 
+/* Hover effects for results in eBay */
 div.container-fluid.col-xs-12.ebay-row:hover {
   background-color: #f7c0c0;
 }
 
+/* Hover effects for results in Etsy */
 div.container-fluid.col-xs-12.etsy-row:hover {
   background-color: #e3cdf7;
 }
 
+/* Remove spacing between the jumbotron and the search bar */
 .results {
   display: none;
   padding-bottom: 0px;
 }
 
+/* Remove spacing between the jumbotron and the search bar */
 .search {
   padding-top: 0px;
   padding-bottom: 80px;
 }
 
+/* Hide eBay search results jumbotron until after the user first uses the main search bar */
 .etsy-search {
   display: none;
 }
 
+/* Hide Etsy search results jumbotron until after the user first uses the main search bar */
 .ebay-search {
   display: none;
 }
 
+/* Hide the 'Searching...' notification */
 .hidden {
   display: none;
 }
