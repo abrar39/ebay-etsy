@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
+img { 
+  height: auto; 
+  width: 100% 
+}
+
 body {
   background: url(http://cdn.home-designing.com/wp-content/uploads/2012/03/modern-neutral-living-room.jpeg);
   background-size: cover;
@@ -37,6 +46,7 @@ nav {
 /* Navbar Brand Image */
 #brandImg {
   height: 40px;
+  width: 40px;
   border-radius: 50%;
   vertical-align: middle;
 }
@@ -74,13 +84,7 @@ nav {
 
 /* Jumbotron Search Results Font */
 .jumbotron p {
-  font-size: 13px;
-}
-
-/* Jumbotron Search Results Images */
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+  font-size: 16px;
 }
 
 /* Jumbotron Search Resutls Headers */

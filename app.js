@@ -29,7 +29,7 @@ function displayEtsySearchData(data) {
   if (data.ok) {
     for(var i = 0; i < SEARCH_RESULTS_NUM; i++) {
       item = data.results[i];
-      results += '<a href="' + item.url + '" target="_blank"><div class="container-fluid col-xs-12 etsy-row"><div class="container-fluid col-xs-2"><img class="img-fluid img-thumbnail" src="' + item.Images[0].url_75x75 + '"></div><div class="container-fluid col-xs-8"><p>' + item.title + '</p></div><div class="container-fluid col-xs-2"><p>$' + item.price + '</p></div></div></a>';
+      results += '<a href="' + item.url + '" target="_blank"><div class="container-fluid col-xs-12 etsy-row"><div class="container-fluid col-xs-2"><img class="img-thumbnail" src="' + item.Images[0].url_75x75 + '"></div><div class="container-fluid col-xs-8"><p>' + item.title + '</p></div><div class="container-fluid col-xs-2"><p>$' + item.price + '</p></div></div></a>';
     }
     results += '</div>';
     $('.js-results-etsy').html(results);
@@ -70,7 +70,7 @@ function displayEbaySearchData(data) {
   if(data) {
     for(var i = 0; i < SEARCH_RESULTS_NUM; i++) {
       item = data.findItemsByKeywordsResponse[0].searchResult[0].item[i];
-      results += '<a href="' + item.viewItemURL + '" target="_blank"><div class="container-fluid col-xs-12 ebay-row"><div class="container-fluid col-xs-2"><img class="img-fluid img-thumbnail" src="' + item.galleryURL + '"></div><div class="container-fluid col-xs-8"><p>' + item.title + '</p></div><div class="container-fluid col-xs-2"><p>$' + item.sellingStatus[0].currentPrice[0].__value__ + '</p></div></div></a>';
+      results += '<a href="' + item.viewItemURL + '" target="_blank"><div class="container-fluid col-xs-12 ebay-row"><div class="container-fluid col-xs-2"><img class="img-thumbnail" src="' + item.galleryURL + '"></div><div class="container-fluid col-xs-8"><p>' + item.title + '</p></div><div class="container-fluid col-xs-2"><p>$' + item.sellingStatus[0].currentPrice[0].__value__ + '</p></div></div></a>';
     }
     results += '</div>';
     $('.js-results-ebay').html(results);
