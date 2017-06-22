@@ -1,3 +1,5 @@
+Website can be found in http://betsy-search.com/
+
 #Introduction
 Betsy is a shopping search website. It was created so users can search for products on both eBay and Etsy simultaneously, while also giving users the option to search both websites with different queries. The website provides the user with the links to the product on their respective websites.
 
