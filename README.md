@@ -140,8 +140,8 @@ main.css is commented for each ruleset
 --- Future Revisions v1.1 ---
 -----------------------------
 Version 1.1 will have, but not limited to, the following features:
-  Will replace Twitter Bootstrap with own CSS Grid System
-  Search result thumbnails will be larger so users can view the product more easily
-  The background image will be part of a carousel of images-- possibly a carousel of videos similar to AirBnb
-  Search results will include an Amazon div with its own results
-  Each search bars will include its own subimt button
+> Will replace Twitter Bootstrap with own CSS Grid System
+> Search result thumbnails will be larger so users can view the product more easily
+> The background image will be part of a carousel of images-- possibly a carousel of videos similar to AirBnb
+> Search results will include an Amazon div with its own results
+> Each search bars will include its own subimt button
