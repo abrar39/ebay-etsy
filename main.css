@@ -59,6 +59,14 @@ nav {
   color: #c68e1d;
 }
 
+/* Banner Text */
+#bannerText {
+  display: none;
+  font-size: 30px;
+  text-align: center;
+  color: #264d00;
+}
+
 /* Banner Search Bar */
 #bannerSearch {
   display: none;
