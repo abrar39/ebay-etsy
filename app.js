@@ -165,7 +165,7 @@ function watchSubmit() {
   /* Main Search Bar event handler*/
   $('.js-query-main').keypress(function(e) {
     if(e.which === ENTER_KEY) {
-      var query = $(this).val();
+      let query = $(this).val();
       if(query.trim() == "") {
         revealEmptyQueryNotify();
         return;
@@ -180,7 +180,7 @@ function watchSubmit() {
   /* eBay event handler*/
   $('.js-query-ebay').keypress(function(e) {
     if(e.which === ENTER_KEY) {
-      var query = $(this).val();
+      let query = $(this).val();
       getDataFromEbayApi(query, displayEbaySearchData);
     }
   });
@@ -188,7 +188,7 @@ function watchSubmit() {
   /* Etsy event handler */
   $('.js-query-etsy').keypress(function(e) {
     if(e.which === ENTER_KEY) {
-      var query = $(this).val();
+      let query = $(this).val();
       getDataFromEtsyApi(query, displayEtsySearchData);
     }
   });
